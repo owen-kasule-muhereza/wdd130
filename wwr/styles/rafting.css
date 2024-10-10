@@ -3,10 +3,8 @@
     --secondary-color: #0077b6;
     --accent1-color: #caf0f8;
     --accent2-color: #90e0ef;
-
     --heading-font: 'Rock Salt', cursive;
     --paragraph-font: 'Roboto', sans-serif;
-
     --nav-background-color: var(--accent1-color);
     --nav-link-color: var(--primary-color);
     --nav-hover-link-color: var(--secondary-color);
@@ -27,28 +25,30 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-header, nav, .team-container, .history-content, .contact-form {
+.flex {
     display: flex;
     align-items: center;
+}
+
+.header, .nav, .team-container, .history-content, .contact-form {
     padding: 20px;
 }
 
-header {
+.header {
     background-color: var(--accent1-color);
 }
 
-header img {
+.header img {
     width: 150px;
-    height: auto;
 }
 
-nav {
+.nav {
     justify-content: flex-end;
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
 }
 
-nav a {
+.nav a {
     display: block;
     color: var(--nav-link-color);
     text-decoration: none;
@@ -57,7 +57,7 @@ nav a {
     border-radius: 10px;
 }
 
-nav a:hover {
+.nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
 }
@@ -67,7 +67,6 @@ nav a:hover {
     background-image: url(../images/hero-image.png);
     background-position: center;
     background-size: cover;
-    align-items: center;
 }
 
 .hero img {
@@ -100,7 +99,6 @@ nav a:hover {
 .hero article img {
     float: right;
     width: 100px;
-    height: auto;
     margin-left: 20px;
 }
 
@@ -129,14 +127,10 @@ figcaption {
 }
 
 .history {
-    display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .history h2 {
-    width: 100%;
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -181,10 +175,6 @@ footer .sociallinks {
     margin-left: auto;
 }
 
-.sociallinks a {
-    margin: 0 10px;
-}
-
 .sociallinks img {
     width: 30px;
     height: 30px;
@@ -208,7 +198,6 @@ footer .sociallinks {
 .team h2 {
     background-color: var(--accent1-color);
     padding: 10px 20px;
-    position: relative;
     z-index: 1;
 }
 
@@ -229,17 +218,10 @@ footer .sociallinks {
     border: 2px solid var(--primary-color);
     border-radius: 10px;
     background-color: var(--accent1-color);
-    position: relative;
 }
 
 .team figure {
     margin: 20px;
-}
-
-.team img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
 }
 
 .contact-form {
@@ -251,27 +233,11 @@ footer .sociallinks {
     font-weight: bold;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.contact-form .form-group {
-    align-items: center;
-}
-
-.contact-form .form-group label {
-    margin-right: 10px;
-}
-
-.contact-form input[type="radio"],
-.contact-form input[type="checkbox"] {
-    margin-right: 10px;
-    margin-left: 0;
 }
 
 .contact-form button {
@@ -289,11 +255,11 @@ footer .sociallinks {
 }
 
 @media (max-width: 768px) {
-    header {
+    .header {
         flex-direction: column;
     }
 
-    nav {
+    .nav {
         justify-content: center;
     }
 
