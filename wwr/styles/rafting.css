@@ -1,0 +1,283 @@
+:root {
+    --primary-color: #023e8a;
+    --secondary-color: #0077b6;
+    --accent1-color: #caf0f8;
+    --accent2-color: #90e0ef;
+    --heading-font: 'Rock Salt', cursive;
+    --paragraph-font: 'Roboto', sans-serif;
+    --nav-background-color: var(--accent1-color);
+    --nav-link-color: var(--primary-color);
+    --nav-hover-link-color: var(--secondary-color);
+    --nav-hover-background-color: var(--accent2-color);
+}
+
+body {
+    max-width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #d3e0ea;
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.header, .nav, .team-container, .history-content, .contact-form {
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--accent1-color);
+}
+
+.header img {
+    width: 150px;
+}
+
+.nav {
+    justify-content: flex-end;
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+}
+
+.nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.hero {
+    position: relative;
+    background-image: url(../images/hero-image.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    background-color: #add8e6;
+    border-radius: 10px;
+}
+
+.hero h1, .hero article {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.425);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    top: 20px;
+    font-size: 40px;
+}
+
+.hero article {
+    bottom: 0;
+    max-width: 60%;
+}
+
+.hero article img {
+    float: right;
+    width: 100px;
+    margin-left: 20px;
+}
+
+main, section {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+figure {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--primary-color);
+}
+
+.history {
+    flex-direction: column;
+}
+
+.history h2 {
+    margin-bottom: 20px;
+}
+
+.history-content {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.history img, .history p {
+    width: 30%;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.adventures {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.adventures figure {
+    width: 18%;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid steelblue;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+footer .copyright {
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer .sociallinks {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.sociallinks img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-info iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin-top: 20px;
+}
+
+.team {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.team h2 {
+    background-color: var(--accent1-color);
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.team::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+.team-container {
+    justify-content: space-around;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--accent1-color);
+}
+
+.team figure {
+    margin: 20px;
+}
+
+.contact-form {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .history-content {
+        flex-direction: column;
+    }
+
+    .adventures figure {
+        width: 48%;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventures figure {
+        width: 100%;
+    }
+}
