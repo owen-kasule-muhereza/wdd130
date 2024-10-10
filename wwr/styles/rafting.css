@@ -13,19 +13,12 @@
     --nav-hover-background-color: var(--accent2-color);
 }
 
-* {
-    font-family: var(--paragraph-font);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     max-width: 90%;
     padding: 20px;
     margin: 0 auto;
-    justify-content: center;
     background-color: #d3e0ea;
+    font-family: var(--paragraph-font);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,14 +27,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-header, nav, .team-container, .history-content, .contact-form form {
+header, nav, .team-container, .history-content, .contact-form {
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 header {
-    grid-template-columns: auto 1fr;
-    padding: 20px;
     background-color: var(--accent1-color);
 }
 
@@ -72,14 +64,13 @@ nav a:hover {
 
 .hero {
     position: relative;
-    align-items: center;
     background-image: url(../images/hero-image.png);
     background-position: center;
     background-size: cover;
+    align-items: center;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
     background-color: #add8e6;
@@ -92,7 +83,6 @@ nav a:hover {
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.425);
     padding: 10px;
-    text-align: center;
     margin: 10px;
     border-radius: 5px;
 }
@@ -119,20 +109,20 @@ main, section {
     margin-bottom: 40px;
 }
 
-section figure, .adventures figure {
+figure {
     display: inline-block;
     margin: 10px;
     text-align: center;
 }
 
-section img, .adventures img {
+img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
 }
 
-section figcaption, .adventures figcaption {
+figcaption {
     margin-top: 5px;
     font-size: 0.9em;
     color: var(--primary-color);
@@ -154,7 +144,6 @@ section figcaption, .adventures figcaption {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    text-align: left;
 }
 
 .history img, .history p {
@@ -253,7 +242,7 @@ footer .sociallinks {
     border-radius: 10px;
 }
 
-.contact-form form {
+.contact-form {
     flex-direction: column;
     gap: 10px;
 }
@@ -301,7 +290,7 @@ footer .sociallinks {
 
 @media (max-width: 768px) {
     header {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     nav {
